@@ -19,27 +19,3 @@ h1 = partial(tag, 'h1')
 h2 = partial(tag, 'h2')
 ul = partial(tag, 'ul')
 li = partial(tag, 'li')
-
-if __name__ == '__main__':
-    result = html(
-        head(
-            title(
-                "HTML DSL in Python"
-            ),
-            meta(
-                name="description",
-                content="a simple html dsl"
-            )
-        ),
-        body(
-            h1("Welcome to my website", style="color:red;"),
-            h2("Here are a few items from my todo list: "),
-            ul(
-                li("Item one"),
-                li("Item two"),
-                li("Item three")
-            )
-        )
-    )
-    with open('index.html', 'w') as file:
-        file.write(result)
