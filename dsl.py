@@ -16,6 +16,7 @@ title = partial(tag, 'title')
 meta = partial(tag, 'meta')
 body = partial(tag, 'body')
 h1 = partial(tag, 'h1')
+h2 = partial(tag, 'h2')
 ul = partial(tag, 'ul')
 li = partial(tag, 'li')
 
@@ -31,7 +32,8 @@ if __name__ == '__main__':
             )
         ),
         body(
-            h1("A few things I like", style="color:red;"),
+            h1("Welcome to my website", style="color:red;"),
+            h2("Here are a few items from my todo list: "),
             ul(
                 li("Item one"),
                 li("Item two"),
